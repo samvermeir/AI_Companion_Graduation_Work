@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SpeechLib;
+using UnityEngine.UI;
 
 public class VoiceOutput : MonoBehaviour
 {
@@ -37,14 +38,20 @@ public class VoiceOutput : MonoBehaviour
         }
     }
 
-    public void PlayVoiceOutput()
+    public void PlayVoiceOutput(string outputText)
     {
+        OutputText = outputText;
         PlayVoiceOutputBool = true;
     }
-    public void SetOutputText(string text)
+    public void PlayVoiceOutput(Text outputText)
     {
-        OutputText = text;
+        OutputText = outputText.text;
+        PlayVoiceOutputBool = true;
     }
+    //public void SetOutputText(string text)
+    //{
+
+    //}
     public void SetVolume(int volume)
     {
         Volume = volume;

@@ -18,4 +18,9 @@ public class AI_Manager : MonoBehaviour
     {
 
     }
+
+    public void TEMP_VoiceOutputTesting(string output)
+    {
+        VoiceOut.PlayVoiceOutput(output);
+    }
 }
